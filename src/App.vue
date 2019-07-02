@@ -1,17 +1,20 @@
 <template>
   <div id="app" class="small-container">
    <h1>Todo List</h1>
+   <todo-form />
    <todo-table :tasks="tasks"/>
   </div>
 </template>
 
 <script>
 import TodoTable from './components/TodoTable.vue'
+import TodoForm from './components/TodoForm.vue'
 
 export default {
   name: 'app',
   components: {
-    TodoTable
+    TodoTable,
+    TodoForm
   },
   data(){
     return{
