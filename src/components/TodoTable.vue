@@ -8,21 +8,9 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Shopping for groceries</td>
-                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                </tr>
-                <tr>
-                    <td>Shopping for groceries</td>
-                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                </tr>
-                <tr>
-                    <td>Shopping for groceries</td>
-                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                </tr>
-                <tr>
-                    <td>Shopping for groceries</td>
-                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                <tr v-for="task in tasks" :key="task.id">
+                    <th>{{ task.name }}</th>
+                    <th>{{ task.description }}</th>
                 </tr>
             </tbody>
         </table>
@@ -31,7 +19,10 @@
 
 <script>
 export default {
-    name : 'todo-table'
+    name : 'todo-table',
+    props : {
+        tasks : Array
+    }
 
 }
 </script>
