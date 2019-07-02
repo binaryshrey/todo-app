@@ -9,8 +9,8 @@
             </thead>
             <tbody>
                 <tr v-for="task in tasks" :key="task.id">
-                    <th>{{ task.name }}</th>
-                    <th>{{ task.description }}</th>
+                    <td>{{ task.name }}</td>
+                    <td>{{ task.description }}</td>
                 </tr>
             </tbody>
         </table>
