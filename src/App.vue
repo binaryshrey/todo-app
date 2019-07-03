@@ -2,7 +2,10 @@
   <div id="app" class="small-container">
    <h1>Todo List</h1>
    <todo-form @add:todo="addTodo"/>
-   <todo-table :todos="todos" @delete:todo="deleteTodo"/>
+   <todo-table 
+   :todos="todos" 
+   @delete:todo="deleteTodo"
+   />
   </div>
 </template>
 
@@ -63,11 +66,18 @@ export default {
 
 <style>
 button {
-    background: #009435;
-    border: 1px solid #009435;
-  }
+  background: #009435;
+  border: 1px solid #009435;
+}
 
-  .small-container {
-    max-width: 680px;
-  }
+button:hover,
+button:active,
+button:focus {
+  background: #32a95d;
+  border: 1px solid #32a95d;
+}
+
+.small-container {
+  max-width: 680px;
+}
 </style>

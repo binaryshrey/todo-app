@@ -78,19 +78,19 @@ export default {
 </script>
 
 <style scoped>
-  form {
-    margin-bottom: 2rem;
-  }
+form {
+  margin-bottom: 2rem;
+}
 
-  [class*='-message'] {
-    font-weight: 500;
-  }
+[class*="-message"] {
+  font-weight: 500;
+}
 
-  .error-message {
-    color: #d33c40;
-  }
+.error-message {
+  color: #d33c40;
+}
 
-  .success-message {
-    color: #32a95d;
-  }
+.success-message {
+  color: #32a95d;
+}
 </style>
