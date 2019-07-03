@@ -1,8 +1,8 @@
 <template>
   <div id="app" class="small-container">
    <h1>Todo List</h1>
-   <todo-form />
-   <todo-table :tasks="tasks"/>
+   <todo-form @add:todo="addTodo"/>
+   <todo-table :todos="todos"/>
   </div>
 </template>
 
@@ -18,7 +18,7 @@ export default {
   },
   data(){
     return{
-      tasks : [
+      todos : [
         {
           id : 1,
           name : 'Shop for clothes, shoes and accessories',
@@ -40,6 +40,17 @@ export default {
           description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
         }
       ],
+    }
+  },
+  methods : {
+    addTodo(todo){
+      const lastId = this.todos.length > 0 ? 
+        this.todos[this.todos.length-1].id : 0;
+        const id = lastId + 1;
+        const newTodo = { ...todo,id};
+
+
+      this.todos = [...this.todos, todo]
     }
   }
 }

@@ -8,9 +8,9 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="task in tasks" :key="task.id">
-                    <td>{{ task.name }}</td>
-                    <td>{{ task.description }}</td>
+                <tr v-for="todo in todos" :key="todo.id">
+                    <td>{{ todo.name }}</td>
+                    <td>{{ todo.description }}</td>
                 </tr>
             </tbody>
         </table>
@@ -21,7 +21,7 @@
 export default {
     name : 'todo-table',
     props : {
-        tasks : Array
+        todos : Array
     }
 
 }

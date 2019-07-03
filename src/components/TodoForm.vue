@@ -17,13 +17,13 @@ export default {
         return{
            todo : {
                 name : '',
-                description : ''
+                description : '',
            }
         }
     },
     methods : {
         handleSubmit(){
-            console.log('testing handleSubmit');
+            this.$emit('add:todo',this.todo);
         }
     }
 
