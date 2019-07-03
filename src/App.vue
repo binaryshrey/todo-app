@@ -2,7 +2,7 @@
   <div id="app" class="small-container">
    <h1>Todo List</h1>
    <todo-form @add:todo="addTodo"/>
-   <todo-table :todos="todos"/>
+   <todo-table :todos="todos" @delete:todo="deleteTodo"/>
   </div>
 </template>
 
@@ -51,6 +51,11 @@ export default {
 
 
       this.todos = [...this.todos, todo]
+    },
+    deleteTodo(id){
+      this.todos = this.todos.filter(
+        todo => todo.id !== id
+      )
     }
   }
 }
